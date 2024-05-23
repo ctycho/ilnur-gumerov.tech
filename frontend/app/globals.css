@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --black100: rgb(2, 12, 19);
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --bg: #F2F2F2;
+
+    --text-color: #fff;
+    --color-white: #fff;
+    --color-black: #000
+
+    --font-size-8: 22px;
+    --font-size-7: 20px;
+    --font-size-6: 18px;
+    --font-size-5: 16px;
+    --font-size-4: 14px;
+    --font-size-3: 12px;
+    --font-size-2: 10px;
+    --font-size-1: 8px;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: var(--color-black);
+    font-size: var(--font-size-16);
+    font-family: Helvetica, sans-serif;
+}
+
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+

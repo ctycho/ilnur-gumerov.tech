@@ -1,0 +1,9 @@
+.home_body {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: 15px;
+}
+
+.follow_me {
+    
+}
