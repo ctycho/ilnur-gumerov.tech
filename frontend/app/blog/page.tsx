@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import Header from '@/app/components/header/header'
 import Footer from '@/app/components/footer/footer'
 import Post from '@/app/components/post/post';
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 
 const helvetica = localFont({ src: '../assets/fonts/Helvetica/helvetica_light.otf' })
 
 
 export const metadata: Metadata = {
-    title: "Ilnur Gumerov",
+    title: "Blog - Ilnur Gumerov",
     description: "My posts in tech",
 };
 
