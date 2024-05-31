@@ -1,7 +1,4 @@
 import Image from "next/image";
-import styles from './subscribeForm.module.css'
-import mail from '@/app/assets/img/mail.svg'
-
 
 
 export default function subscribeForm() {

@@ -1,8 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next";
-import Header from '@/app/components/header/header'
-import Footer from '@/app/components/footer/footer'
+import Header from '@/app/components/header'
+import Footer from '@/app/components/footer'
 import Paragraph from '@/app/components/paragraph'
 import Title from '@/app/components/title'
 import Code from '@/app/components/code'

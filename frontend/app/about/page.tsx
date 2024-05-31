@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from "next";
-import Header from '@/app/components/header/header'
-import Footer from '@/app/components/footer/footer'
+import Header from '@/app/components/header'
+import Footer from '@/app/components/footer'
 import photo from '@/app/assets/img/photo.jpg'
 // import linkedin from '@/app/assets/img/linkedin.svg'
 // import github from '@/app/assets/img/github.svg'
@@ -34,14 +34,15 @@ export default function AboutPage() {
                             </div>
                             <div className='mb-6 mb:m-0'>
                                 <h2 className='text-2xl md:text-4xl font-semibold max-w-screen-sm mb-6'>Building cool stuff on the internet.</h2>
-                                <div className='text-lg'>I'm passionate about building software with great user experiences. Currently, I'm working on Universal Page - the leading platform for the next generation of NFTs.
-
-                                    I have worked for several companies and have also launched multiple products on my own. While some of them did not gain much success, others managed to gain traction. Two of my projects have been acquired, namely:
-                                    1. Serverless SaaS - a Premium SaaS boilerplate and
-                                    2. TeamSmart AI - an chrome extension for AI assistants.
-                                    Before becoming a software engineer I played basketball at the highest level in The Netherlands at ZZ Leiden and basketball is still a huge passion of mine.
-
-                                    From time to time, I enjoy writing articles and sharing my knowledge. On this site, you can find my blog posts, tutorials, and updates about projects I'm working on. Subscribe to get notified whenever I launch something new. I only send out emails very occasionally.</div>
+                                <div className='text-lg'>
+                                    I am a dedicated and passionate developer with a strong foundation in programming and algorithms. My primary expertise lies in JavaScript and Python, where I have developed a wide range of projects that demonstrate my ability to solve complex problems and create efficient solutions.
+                                    <br />
+                                    <br />
+                                    Currently, I am diving into the exciting world of Web3, driven by a keen interest in decentralized technologies and blockchain development. This new frontier fascinates me, and I am actively expanding my knowledge and skills in this domain to stay ahead of the curve.
+                                    <br />
+                                    <br />
+                                    Looking ahead, my ultimate goal is to become an AI developer. I am enthusiastic about the transformative potential of artificial intelligence and am committed to mastering the tools and techniques required to innovate in this field. My journey so far has been a blend of continuous learning and practical application, and I am excited about the opportunities that lie ahead in AI development.
+                                </div>
                             </div>
                             <div className=''>
                                 <div className='justify-end mb-16 md:flex hidden'>
@@ -67,7 +68,7 @@ export default function AboutPage() {
                                             </Link>
                                         </li>
                                         <li className='mb-4'>
-                                            <Link href={''} target="_blank" className='group flex items-center gap-4'>
+                                            <Link href={'https://x.com/ctycho_dev'} target="_blank" className='group flex items-center gap-4'>
                                                 <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500"><path d="M20.055 7.983c.011.174.011.347.011.523 0 5.338-3.92 11.494-11.09 11.494v-.003A10.755 10.755 0 0 1 3 18.186c.308.038.618.057.928.058a7.655 7.655 0 0 0 4.841-1.733c-1.668-.032-3.13-1.16-3.642-2.805a3.753 3.753 0 0 0 1.76-.07C5.07 13.256 3.76 11.6 3.76 9.676v-.05a3.77 3.77 0 0 0 1.77.505C3.816 8.945 3.288 6.583 4.322 4.737c1.98 2.524 4.9 4.058 8.034 4.22a4.137 4.137 0 0 1 1.128-3.86A3.807 3.807 0 0 1 19 5.274a7.657 7.657 0 0 0 2.475-.98c-.29.934-.9 1.729-1.713 2.233A7.54 7.54 0 0 0 22 5.89a8.084 8.084 0 0 1-1.945 2.093Z"></path></svg>
                                                 <span className='group-hover:text-teal-500'>Follow on X</span>
                                             </Link>

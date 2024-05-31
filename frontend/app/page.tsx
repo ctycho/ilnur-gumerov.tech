@@ -1,19 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from '@/app/assets/styles/home.module.css'
-import Header from '@/app/components/header/header'
-import Footer from '@/app/components/footer/footer'
-import Post from '@/app/components/homePost/homePost'
-import SubscribeForm from "./components/subscribeForm/subscribeForm";
-import bg from '@/public/back.jpeg'
-import linkedin from '@/app/assets/img/linkedin.svg'
-import github from '@/app/assets/img/github.svg'
-import mail from '@/app/assets/img/mail_black.svg'
+import Header from '@/app/components/header'
+import Footer from '@/app/components/footer'
+import Post from '@/app/components/homePost'
+import SubscribeForm from "./components/subscribeForm";
 
 
 export default async function Home() {
-    // const res = await fetch('http://localhost:8000/posts')
-    // let posts = await res.json()
+    const res = await fetch('http://localhost:8000/posts')
+    let posts = await res.json()
 
     return (
         <>
@@ -38,7 +34,7 @@ export default async function Home() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href='https://medium.com/@ilnur_gumerov' target="_blank">
+                                        <Link href='https://x.com/ctycho_dev' target="_blank">
                                             <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 flex-none fill-zinc-500 transition hover:fill-teal-500"><path d="M20.055 7.983c.011.174.011.347.011.523 0 5.338-3.92 11.494-11.09 11.494v-.003A10.755 10.755 0 0 1 3 18.186c.308.038.618.057.928.058a7.655 7.655 0 0 0 4.841-1.733c-1.668-.032-3.13-1.16-3.642-2.805a3.753 3.753 0 0 0 1.76-.07C5.07 13.256 3.76 11.6 3.76 9.676v-.05a3.77 3.77 0 0 0 1.77.505C3.816 8.945 3.288 6.583 4.322 4.737c1.98 2.524 4.9 4.058 8.034 4.22a4.137 4.137 0 0 1 1.128-3.86A3.807 3.807 0 0 1 19 5.274a7.657 7.657 0 0 0 2.475-.98c-.29.934-.9 1.729-1.713 2.233A7.54 7.54 0 0 0 22 5.89a8.084 8.084 0 0 1-1.945 2.093Z"></path></svg>
                                         </Link>
                                     </li>
@@ -58,15 +54,9 @@ export default async function Home() {
                             </div>
                             <div className={`${styles.home_body} grid lg:flex gap-2`}>
                                 <div className="m-auto mb-10 w-full max-w-md lg:m-0 lg:max-w-full lg:flex-1">
-                                    {/* {posts?.map((post: any) => (
-                                        <Post data={post.Post} />
-                                    ))}
                                     {posts?.map((post: any) => (
                                         <Post data={post.Post} />
                                     ))}
-                                    {posts?.map((post: any) => (
-                                        <Post data={post.Post} />
-                                    ))} */}
                                 </div>
                                 <SubscribeForm />
                             </div>
@@ -76,8 +66,4 @@ export default async function Home() {
             <Footer />
         </>
     );
-}
-
-function renderPosts() {
-
 }

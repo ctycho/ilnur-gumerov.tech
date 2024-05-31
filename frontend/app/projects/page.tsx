@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from "next";
-import Header from '@/app/components/header/header'
-import Footer from '@/app/components/footer/footer'
+import Header from '@/app/components/header'
+import Footer from '@/app/components/footer'
 import Project from '@/app/components/project';
 import qualySmileLogo from '@/app/assets/img/qualySmileLogo.svg'
 import localFont from 'next/font/local'

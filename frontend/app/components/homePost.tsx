@@ -1,4 +1,3 @@
-import styles from './homePost.module.css'
 import Image from "next/image";
 // import cleanHTML from '../cleanHTML/cleanHTML'
 
@@ -7,7 +6,7 @@ import Image from "next/image";
 export default function homePost(props: any) {
     // console.log(cleanHTML(data.content))
     return (
-        <article key={props.data.id} className={`${styles.article} relative isolate flex flex-col lg:flex-row gap-6 mb-6 last:mb-0`}>
+        <article key={props.data.id} className={`relative isolate flex flex-col lg:flex-row gap-6 mb-6 last:mb-0`}>
             <div>
                 {props.data.image ? 
                     ''
@@ -16,7 +15,7 @@ export default function homePost(props: any) {
                     //     height={160}
                     //     ref={}/>
                     :
-                    <div className={`${styles.image_empty} w-max-6xl lg:w-40 h-60 lg:h-40 rounded-2xl bg-gray-50 dark:bg-slate-700 object-cover ring-inset ring-gray-900/10 ring-1`}>
+                    <div className={`w-max-6xl lg:w-40 h-60 lg:h-40 rounded-2xl bg-gray-50 dark:bg-slate-700 object-cover ring-inset ring-gray-900/10 ring-1`}>
 
                     </div>
                 }
