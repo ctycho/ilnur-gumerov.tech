@@ -10,7 +10,7 @@ export default function mobMenu() {
             <div className="md:hidden" onClick={() => { setOpenModal(true) }}>Menu</div>
             {opened ?
             <div>
-                <div onClick={() => { setOpenModal(false) }} className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80 opacity-100"></div>
+                <div onClick={() => { setOpenModal(false) }} className="fixed -inset-2 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80 opacity-100"></div>
                 <div className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800 opacity-100 scale-100" id="headlessui-popover-panel-:r4h:" data-headlessui-state="open">
                     <div className="flex flex-row-reverse items-center justify-between">
                         <button onClick={() => { setOpenModal(false) }} aria-label="Close menu" className="-m-1 p-1" type="button" data-headlessui-state="open">
