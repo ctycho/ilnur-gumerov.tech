@@ -8,7 +8,7 @@ import SubscribeForm from "./components/subscribeForm";
 
 
 export default async function Home() {
-    let posts = {}
+    let posts = []
     try {
         const res = await fetch('http://localhost:8000/posts')
         posts = await res.json()
