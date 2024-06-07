@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import picture from '@/app/assets/img/1_qgYBZVCpVaQa9DsThIWmbQ.gif'
+// import picture from '@/app/assets/img/1_qgYBZVCpVaQa9DsThIWmbQ.gif'
 
 
 
@@ -26,11 +26,11 @@ export default function Post(props: any) {
                     </div>
                     <div className="ml-4 md:ml-20 lg:ml-32 flex items-center">
                         <Image
-                        src={picture}
+                        src={props.image}
                         width={112}
                         height={112}
                         alt={''}
-                        className="w-24 h-24"/>
+                        className="w-24 h-24 object-cover rounded"/>
                     </div>
                 </Link>
             </article>

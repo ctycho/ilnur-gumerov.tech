@@ -1,21 +1,24 @@
 import Image from "next/image";
-// import cleanHTML from '../cleanHTML/cleanHTML'
 
 
 
 export default function homePost(props: any) {
     // console.log(cleanHTML(data.content))
+    console.log(props.data)
     return (
         <article key={props.data.id} className={`relative isolate flex flex-col lg:flex-row gap-6 mb-6 last:mb-0`}>
             <div>
                 {props.data.image ? 
-                    ''
-                    // <Image
-                    //     width={160}
-                    //     height={160}
-                    //     ref={}/>
+                    <Image
+                        src={props.data.image}
+                        width={160}
+                        height={160}
+                        alt="Post image"
+                        className="w-[160px] h-[130px] object-cover rounded-md"
+                        // ref={props.image}
+                    />
                     :
-                    <div className={`w-max-6xl lg:w-40 h-60 lg:h-40 rounded-2xl bg-gray-50 dark:bg-slate-700 object-cover ring-inset ring-gray-900/10 ring-1`}>
+                    <div className={`w-max-6xl lg:w-40 h-[130px] lg:h-40 rounded-2xl bg-gray-50 dark:bg-slate-700 object-cover ring-inset ring-gray-900/10 ring-1`}>
 
                     </div>
                 }

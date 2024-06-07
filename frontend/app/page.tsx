@@ -1,20 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from '@/app/assets/styles/home.module.css'
 import Header from '@/app/components/header'
 import Footer from '@/app/components/footer'
 import Post from '@/app/components/homePost'
 import SubscribeForm from "./components/subscribeForm";
+import posts from '@/app/data/post'
 
 
 export default async function Home() {
-    let posts = []
-    try {
-        const res = await fetch('http://localhost:8000/posts')
-        posts = await res.json()
-    } catch(e) {
-        console.log('No posts')
-    }
+    // let posts = []
+    // try {
+    //     const res = await fetch('http://localhost:8000/posts')
+    //     posts = await res.json()
+    // } catch(e) {
+    //     console.log('No posts')
+    // }
 
     return (
         <>
@@ -22,9 +22,9 @@ export default async function Home() {
                 <div className="px-4 sm:px-8 md:px-10 lg:px-12 mt-36">
                     <div className="max-w-screen-xl m-auto">
                         <main className='mb-20'>
-                            <div className={`${styles.ceo_info} mb-12`}>
+                            <div className={`mb-12`}>
                                 <h1 className='text-2xl md:text-4xl font-semibold max-w-screen-sm mb-5'>Ilnur Gumerov</h1>
-                                <h3 className={`${styles.about_me} text-lg mb-4`}> {/**w-3/4 md:w-2/4  */}
+                                <h3 className={`text-lg mb-4 text-zinc-500`}>
                                     Welcome to my blog! Software developer with expertise in Python and JavaScript.
                                 </h3>
                                 <ul className="flex gap-6">
@@ -35,7 +35,7 @@ export default async function Home() {
                                     </li>
                                     <li>
                                         <Link href='https://github.com/ctycho' target="_blank" className="group">
-                                            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"></path></svg>
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500"><path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"></path></svg>
                                         </Link>
                                     </li>
                                     <li>
@@ -52,15 +52,15 @@ export default async function Home() {
                                     </li>
                                     <li>
                                         <Link href='mailto:ilnur_gumerov_1996@mail.ru' target="_blank">
-                                            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 flex-none fill-zinc-500 hover:fill-teal-500 transition"><path fill-rule="evenodd" d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"></path></svg>
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 flex-none fill-zinc-500 hover:fill-teal-500 transition"><path fillRule="evenodd" d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"></path></svg>
                                         </Link>
                                     </li>
                                 </ul>
                             </div>
-                            <div className={`${styles.home_body} grid lg:flex gap-2`}>
+                            <div className={`grid lg:flex gap-6`}>
                                 <div className="m-auto mb-10 w-full max-w-md lg:m-0 lg:max-w-full lg:flex-1">
                                     {posts?.map((post: any) => (
-                                        <Post data={post.Post} />
+                                        <Post data={post} />
                                     ))}
                                 </div>
                                 <SubscribeForm />
